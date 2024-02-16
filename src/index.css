@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    /********************
+    Set your base color & font for body here:
+    ********************/
+    * {
+        @apply text-slate-950 font-body;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        /* @apply font-primary; */
+    }
+
+    i {
+        @apply text-inherit;
+    }
+}
+
+@layer components {
+
+    /********************
+    *** HEADER
+    ********************/
+    header {
+        @apply bg-base-100 px-4 py-2;
+    }
+
+    .menu {
+        @apply flex items-center;
+    }
+
+    .menu__item {
+        @apply relative py-2 px-6 after:content-[''] after:w-px after:h-full after:absolute  after:left-0 after:top-0 after:bg-white/20 first:after:hidden;
+    }
+    .menu__link {
+        @apply text-white text-sm transition hover:text-secondary;
+    }
+
+      /********************
+    *** BUTTONS
+    ********************/
+    .btn {
+        @apply inline-flex items-center px-4 py-1 rounded-xl min-h-[40px] transition text-sm active:scale-95;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white hover:bg-primary/50;
+    }
+
+    .btn-secondary {
+        @apply bg-secondary text-white hover:bg-secondary/50;
+    }
+
+    .btn-square {
+        @apply px-0 aspect-square justify-center;
+    }
+}
