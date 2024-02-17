@@ -86,13 +86,17 @@
         @apply flex gap-4;
     }
     .pagination__bullet {
-        @apply relative inline-block w-1.5 h-1.5 rounded-full bg-white transition cursor-pointer;
+        @apply relative inline-block w-1.5 h-1.5 rounded-full bg-white transition cursor-pointer hover:opacity-20;
     }
     .pagination__bullet::after {
-        @apply content-[''] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-white/10 rounded-full transition hidden;
+        @apply content-[''] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-white/10 rounded-full transition duration-500 opacity-0 scale-0;
     }
-    .pagination__bullet.active::after {
-        @apply block;
+    .pagination__bullet.active {
+        @apply pointer-events-none after:opacity-100 after:scale-100;
+    }
+
+    .pagination__bullet--md {
+        @apply w-2 h-2 after:w-6 after:h-6;
     }
 }
 

@@ -22,6 +22,7 @@
             <button class="btn btn-primary"><i class="fa-solid fa-download text-inherit mr-2"></i> Download Board</button>
         </div>
     </header>
+
     <main class="bg-home bg-no-repeat bg-[length:100%_300vh]">
         <section id="hero-section" class="container relative min-h-screen flex items-center">
             <img src="./public/img/logo.png" class="w-full max-w-[600px] object-contain" alt="The Whitsundays">
@@ -78,11 +79,12 @@
                 </ul>
                 
                 <div id="tabs-content" class="w-full max-w-screen-xl mx-4 flex flex-col justify-center">
+                    <!-- tab content : video -->
                     <div id="video-tab" class="tabs__content">
                        <div class="flex flex-col lg:flex-row gap-12">
                             <div class="w-full lg:w-3/5 flex flex-col items-center gap-6">
-                                <div class="relative rounded-2xl w-full h-auto aspect-video bg-slate-950">
-                                    <img src="" alt="thumbnail">
+                                <div class="relative rounded-2xl w-full h-[420px] aspect-video bg-slate-950 overflow-hidden">
+                                    <iframe class="absolute top-0 left-0" width="100%" height="100%" src="https://www.youtube.com/embed/dhKEFcnU508?si=89iy9lXI6sUgsF6a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                                 </div>
                                 <div class="pagination">
                                     <span class="pagination__bullet active"></span>
@@ -98,11 +100,13 @@
                             </div>
                        </div>
                     </div>
+
+                    <!-- tab content : photog -->
                     <div id="photography-tab" class="tabs__content">
                        <div class="flex flex-col lg:flex-row gap-12">
                             <div class="w-full lg:w-3/5 flex flex-col items-center gap-6">
-                                <div class="relative rounded-2xl w-full h-auto aspect-video bg-slate-950">
-                                    <img src="" alt="thumbnail">
+                                <div class="relative rounded-2xl w-full h-[420px] aspect-square bg-slate-950 overflow-hidden">
+                                    <img class="absolute top-0 left-0 w-full h-full object-cover object-center" src="./public/img/slideshow/photog.jpeg" alt="thumbnail">
                                 </div>
                                 <div class="pagination">
                                     <span class="pagination__bullet active"></span>
@@ -111,18 +115,86 @@
                                 </div>
                             </div>
                             <div class="w-full h-full lg:w-2/5 py-6 flex flex-col gap-10">
-                                <p class="lg:max-w-[60%]">Photog</p>
+                                <p class="lg:max-w-[60%]">Shots posted on Facebook and Instagram every day inspired thousands of entries. We reacted to the storyline as it developed in real time, selecting and treating the next image according to the day’s winning scene. </p>
                                 <button class="btn btn-secondary btn-md w-fit">View Project</button>
                             </div>
                        </div>
+                    </div>
+
+
+                    <!-- tab content : social -->
+                    <div id="social-tab" class="tabs__content">
+                        <div class="flex flex-col lg:flex-row gap-12">
+                             <div class="w-full lg:w-3/5 flex flex-col items-center gap-6">
+                                 <div class="relative rounded-2xl w-full h-[420px] aspect-square bg-slate-950 overflow-hidden">
+                                     <img class="absolute top-0 left-0 w-full h-full object-cover object-center" src="./public/img/slideshow/social.jpg" alt="thumbnail">
+                                 </div>
+                                 <div class="pagination">
+                                     <span class="pagination__bullet active"></span>
+                                     <span class="pagination__bullet"></span>
+                                     <span class="pagination__bullet"></span>
+                                 </div>
+                             </div>
+                             <div class="w-full h-full lg:w-2/5 py-6 flex flex-col gap-10">
+                                 <p class="lg:max-w-[60%]">The complete movie storyboard showcased the entire story, completely inspired by stunning images captured in the Whitsundays, with all 20 winning scenes accompanying the images. </p>
+                                 <button class="btn btn-secondary btn-md w-fit">View Project</button>
+                             </div>
+                        </div>
+                     </div>
+
+                    <!-- tab content : PR -->
+                    <div id="pr-tab" class="tabs__content">
+                        <div class="flex flex-col lg:flex-row gap-12">
+                             <div class="w-full lg:w-3/5 flex flex-col items-center gap-6">
+                                 <div class="relative rounded-2xl h-[420px] aspect-square bg-slate-950 overflow-hidden">
+                                     <img class="absolute top-0 left-0 w-full h-full object-contain object-center" src="./public/img/slideshow/pr.jpg" alt="thumbnail">
+                                 </div>
+                                 <div class="pagination">
+                                     <span class="pagination__bullet active"></span>
+                                     <span class="pagination__bullet"></span>
+                                     <span class="pagination__bullet"></span>
+                                 </div>
+                             </div>
+                             <div class="w-full h-full lg:w-2/5 py-6 flex flex-col gap-10">
+                                 <p class="lg:max-w-[60%]">We enlisted the help of Craig Pearce as script supervisor, who was tasked with choosing the winner each day to ensure the story flowed properly, and providing daily writing tips to encourage people to take part.</p>
+                                 <button class="btn btn-secondary btn-md w-fit">View Project</button>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- tab content : radio -->
+                    <div id="radio-tab" class="tabs__content">
+                        <div class="flex flex-col lg:flex-row gap-12">
+                             <div class="w-full lg:w-3/5 flex flex-col items-center gap-6">
+                                 <div class="relative rounded-2xl w-full h-[420px] aspect-square bg-slate-950 overflow-hidden">
+                                     <img class="absolute top-0 left-0 w-full h-full object-cover object-center" src="./public/img/slideshow/radio.jpg" alt="thumbnail">
+                                 </div>
+                                 <div class="pagination">
+                                     <span class="pagination__bullet active"></span>
+                                     <span class="pagination__bullet"></span>
+                                     <span class="pagination__bullet"></span>
+                                 </div>
+                             </div>
+                             <div class="w-full h-full lg:w-2/5 py-6 flex flex-col gap-10">
+                                 <p class="lg:max-w-[60%]">Live reads from NOVA presenters reflected the ever-evolving story of Jake in real time, and encouraged people to get involved to shape the story themselves.</p>
+                                 <button class="btn btn-secondary btn-md w-fit">View Project</button>
+                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        
-    </footer>
+
+    <footer></footer>
+
+    <nav class="pagination fixed top-1/2 -translate-y-1/2 right-8 flex-col" id="section-pagination">
+        <a href="#hero-section" class="pagination__bullet active"></a>
+        <a href="#challenge-section"class="pagination__bullet"></a>
+        <a href="#solution-section" class="pagination__bullet"></a>
+        <a href="#slideshow-section" class="pagination__bullet"></a>
+    </nav>
+
     <script src="https://kit.fontawesome.com/32e412a46e.js" crossorigin="anonymous"></script>
     <script src="dist/app.js"></script>
 </body>

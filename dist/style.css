@@ -782,29 +782,43 @@ header {
   transition-duration: 150ms;
 }
 
+.pagination__bullet:hover {
+  opacity: 0.2;
+}
+
 .pagination__bullet::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  display: none;
   height: 1.25rem;
   width: 1.25rem;
   --tw-translate-x: -50%;
   --tw-translate-y: -50%;
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 9999px;
   background-color: rgb(255 255 255 / 0.1);
+  opacity: 0;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-duration: 500ms;
   --tw-content: '';
   content: var(--tw-content);
 }
 
+.pagination__bullet.active {
+  pointer-events: none;
+}
+
 .pagination__bullet.active::after {
-  display: block;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  content: var(--tw-content);
+  opacity: 1;
 }
 
 .fixed {
@@ -819,8 +833,16 @@ header {
   position: relative;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .left-1\/2 {
   left: 50%;
+}
+
+.right-8 {
+  right: 2rem;
 }
 
 .top-0 {
@@ -865,6 +887,10 @@ header {
   display: none;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .aspect-video {
   aspect-ratio: 16 / 9;
 }
@@ -873,8 +899,8 @@ header {
   height: 8rem;
 }
 
-.h-auto {
-  height: auto;
+.h-\[420px\] {
+  height: 420px;
 }
 
 .h-full {
@@ -932,6 +958,10 @@ header {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.resize {
+  resize: both;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -976,6 +1006,10 @@ header {
   gap: 2rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -1011,14 +1045,14 @@ header {
      object-fit: contain;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .py-6 {
