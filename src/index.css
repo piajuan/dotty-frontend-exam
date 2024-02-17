@@ -9,16 +9,15 @@
     Set your base color & font for body here:
     ********************/
     * {
-        @apply text-slate-950 font-body;
+        @apply text-white font-body;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        /* @apply font-primary; */
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-light;
+    }
+
+    .container {
+        @apply mx-auto px-4;
     }
 
     i {
@@ -46,11 +45,11 @@
         @apply text-white text-sm transition hover:text-secondary;
     }
 
-      /********************
+    /********************
     *** BUTTONS
     ********************/
     .btn {
-        @apply inline-flex items-center px-4 py-1 rounded-xl min-h-[40px] transition text-sm active:scale-95;
+        @apply inline-flex items-center px-6 py-1 rounded-xl min-h-[40px] transition text-sm active:scale-95;
     }
 
     .btn-primary {
@@ -63,5 +62,42 @@
 
     .btn-square {
         @apply px-0 aspect-square justify-center;
+    }
+
+    .btn-md {
+        @apply px-10 py-3 text-base;
+    }
+
+    /********************
+    *** TABS
+    ********************/
+    .tabs__nav {
+        @apply flex items-center gap-3;
+    }
+
+    .tabs__link {
+        @apply rounded-2xl px-3 py-2 transition [&.active]:bg-black/10;
+    }
+
+    /********************
+    *** PAGINATION BULLETS
+    ********************/
+    .pagination {
+        @apply flex gap-4;
+    }
+    .pagination__bullet {
+        @apply relative inline-block w-1.5 h-1.5 rounded-full bg-white transition cursor-pointer;
+    }
+    .pagination__bullet::after {
+        @apply content-[''] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-white/10 rounded-full transition hidden;
+    }
+    .pagination__bullet.active::after {
+        @apply block;
+    }
+}
+
+@layer utilities {
+    .non-italic {
+        font-style: normal;
     }
 }

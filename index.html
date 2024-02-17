@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" data-theme="light">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +7,123 @@
     <link rel="stylesheet" href="./dist/style.css">
     <title>Dotty Frontend Exam | Sophia Juan</title>
 </head>
-<body>
-    <header class="fixed top-0 w-full">
-        <div class="container mx-auto flex items-center justify-between">
+<body class="bg-accent">
+    <header class="fixed top-0 w-full z-10">
+        <div class="container flex items-center justify-between">
             <nav>
                 <ul class="menu hidden md:flex">
-                    <li class="menu__item"><a class="btn btn-primary btn-square" href="#"><i class="fa-solid fa-play text-inherit text-lg"></i></a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Background & Challenge </a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Solution </a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Results & Effectiveness </a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Slideshow</a></li>
+                    <li class="menu__item"><a class="btn btn-primary btn-square" href="#hero-section"><i class="fa-solid fa-play text-inherit text-lg"></i></a></li>
+                    <li class="menu__item"><a class="menu__link" href="#challenge-section">Background & Challenge </a></li>
+                    <li class="menu__item"><a class="menu__link" href="#solution-section">Solution </a></li>
+                    <li class="menu__item"><a class="menu__link" href="#solution-section">Results & Effectiveness </a></li>
+                    <li class="menu__item"><a class="menu__link" href="#slideshow-section">Slideshow</a></li>
                 </ul>
             </nav>
             <button class="btn btn-primary"><i class="fa-solid fa-download text-inherit mr-2"></i> Download Board</button>
         </div>
-       
     </header>
-    <main>
-        <section class="min-h-screen bg-teal-800">
-
+    <main class="bg-home bg-no-repeat bg-[length:100%_300vh]">
+        <section id="hero-section" class="container relative min-h-screen flex items-center">
+            <img src="./public/img/logo.png" class="w-full max-w-[600px] object-contain" alt="The Whitsundays">
+            <button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32"><img src="./public/img/ic-play.svg" class="w-full object-contain" alt="Play button"></button>
+        </section>
+        <section id="challenge-section" class="container min-h-screen grid items-center gap-2 grid-cols-1 lg:grid-cols-2">
+            <div>
+                <img src="./public/img/logo.png" class="w-full max-w-[500px] object-contain" alt="The Whitsundays">
+            </div>
+            <div class="flex flex-col gap-12">
+                <article class="flex flex-col gap-4">
+                    <h2 class="text-2xl lg:text-5xl max-w-[300px]">Background & Audience</h2>
+                    <p>Tourism & Events Queensland wanted to increase consideration of The Whitsundays amongst ‘social fun seekers’; digitally savvy consumers that socialise substantially online. </p>
+                </article>
+                <article class="flex flex-col gap-4">
+                    <h2 class="text-2xl lg:text-5xl">Problem</h2>
+                    <p>The Whitsundays was losing its cachet as an aspirational 
+                        holiday location.</p>
+                </article>
+                <article class="flex flex-col gap-4">
+                    <h2 class="text-2xl lg:text-5xl">Objective</h2>
+                    <p>Shift perceptions and re-build the Whitsundays’ social currency as a world-class destination. </p>
+                </article>
+            </div>
+        </section>
+        <section id="solution-section" class="container max-w-screen-lg min-h-screen flex flex-col justify-center">
+            <h2 class="text-2xl lg:text-5xl text-center mb-12">Solution</h2>
+            <div class="grid gap-12 lg:grid-cols-2">
+                <article class="flex flex-col gap-8">
+                    <p>
+                        We knew movies rated high on the list of our target’s interests and, with incredible beaches, seaplanes, yachts and glamorous locations, the Whitsundays is the perfect setting for a movie. 
+                    </p>
+                   <p>So we invited Australians to write it:  </p>
+                   <em class="text-2xl font-light non-italic"> The Whitsundays. <br />
+                    A movie that’s waiting to be written.</em>
+                    <p>We enlisted world-renowned screenwriter Craig Pearce as Script Supervisor. Then for 20 days we posted a daily storyboard image on Facebook and Instagram, inviting the public to write scenes for a chance to win a $10,000 luxury holiday.</p>
+                </article>
+                <article class="flex flex-col gap-8">
+                    <p> The campaign launched with a trailer, radio and online advertising. </p>
+                    <p> We reacted to the storyline as it developed, selecting and treating images according to the previous winning scene. </p>
+                    <p> Each scene written and shared became a compelling “ad” for the Whitsundays.  </p>
+                    <p> Together, a Hollywood screenwriter and the Australian public had created the world’s first crowd-sourced movie storyboard and a story universe with millions of possible permutations. </p>
+                </article>
+            </div>
+        </section>
+        <section id="slideshow-section" class="h-screen pt-32">
+            <div class="container h-full flex flex-col justify-center items-center gap-10">
+                <ul class="tabs__nav w-fit mx-auto" id="tabs-nav" role="tablist">
+                    <li class="tabs__item"><a class="tabs__link" href="#video-tab">Video</a></li>
+                    <li class="tabs__item"><a class="tabs__link" href="#photography-tab">Photography</a></li>
+                    <li class="tabs__item"><a class="tabs__link" href="#social-tab">Social</a></li>
+                    <li class="tabs__item"><a class="tabs__link" href="#pr-tab">PR</a></li>
+                    <li class="tabs__item"><a class="tabs__link" href="#radio-tab">Radio</a></li>
+                </ul>
+                
+                <div id="tabs-content" class="w-full max-w-screen-xl mx-4 flex flex-col justify-center">
+                    <div id="video-tab" class="tabs__content">
+                       <div class="flex flex-col lg:flex-row gap-12">
+                            <div class="w-full lg:w-3/5 flex flex-col items-center gap-6">
+                                <div class="relative rounded-2xl w-full h-auto aspect-video bg-slate-950">
+                                    <img src="" alt="thumbnail">
+                                </div>
+                                <div class="pagination">
+                                    <span class="pagination__bullet active"></span>
+                                    <span class="pagination__bullet"></span>
+                                    <span class="pagination__bullet"></span>
+                                </div>
+                            </div>
+                            <div class="w-full h-full lg:w-2/5 py-6 flex flex-col gap-10">
+                                <p class="lg:max-w-[60%]">A 60 second promotional movie trailer played on TV, online as 
+                                    pre rolls and via Facebook, to promote the movie that was waiting to be written to our movie-loving target audience, 
+                                    and encourage them to enter.</p>
+                                <button class="btn btn-secondary btn-md w-fit">View Project</button>
+                            </div>
+                       </div>
+                    </div>
+                    <div id="photography-tab" class="tabs__content">
+                       <div class="flex flex-col lg:flex-row gap-12">
+                            <div class="w-full lg:w-3/5 flex flex-col items-center gap-6">
+                                <div class="relative rounded-2xl w-full h-auto aspect-video bg-slate-950">
+                                    <img src="" alt="thumbnail">
+                                </div>
+                                <div class="pagination">
+                                    <span class="pagination__bullet active"></span>
+                                    <span class="pagination__bullet"></span>
+                                    <span class="pagination__bullet"></span>
+                                </div>
+                            </div>
+                            <div class="w-full h-full lg:w-2/5 py-6 flex flex-col gap-10">
+                                <p class="lg:max-w-[60%]">Photog</p>
+                                <button class="btn btn-secondary btn-md w-fit">View Project</button>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         
     </footer>
     <script src="https://kit.fontawesome.com/32e412a46e.js" crossorigin="anonymous"></script>
+    <script src="dist/app.js"></script>
 </body>
 </html>
