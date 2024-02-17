@@ -24,10 +24,25 @@
     </header>
 
     <main class="bg-home bg-no-repeat bg-[length:100%_300vh]">
-        <section id="hero-section" class="container relative min-h-screen flex items-center">
-            <img src="./public/img/logo.png" class="w-full max-w-[600px] object-contain" alt="The Whitsundays">
-            <button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32"><img src="./public/img/ic-play.svg" class="w-full object-contain" alt="Play button"></button>
+        <!-- hero section -->
+        <section id="hero-section" class="relative h-screen overflow-hidden">
+            <div class="container flex items-center h-full">
+                <img src="./public/img/logo.png" class="w-full max-w-[600px] object-contain" alt="The Whitsundays">
+
+                <button class="play-hero-btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 transition active:scale-95"><img src="./public/img/ic-play.svg" class="w-full object-contain" alt="Play button"></button>
+            </div>
+
+            <!-- video : to be shown only when play button is clicked -->
+            <video class="absolute top-0 left-0 w-full h-full object-cover hidden" id="hero-video" autoplay="autoplay" loop>
+                <source src="./public/video/hero-video.mp4" type="video/mp4" />
+                <p>
+                  Your browser doesn't support HTML video. Here is a
+                  <a href="./public/video/hero-video.mp4" download="myVideo.mp4">link to the video</a> instead.
+                </p>
+            </video>
         </section>
+
+        <!-- challenge section -->
         <section id="challenge-section" class="container min-h-screen grid items-center gap-2 grid-cols-1 lg:grid-cols-2">
             <div>
                 <img src="./public/img/logo.png" class="w-full max-w-[500px] object-contain" alt="The Whitsundays">
@@ -48,6 +63,8 @@
                 </article>
             </div>
         </section>
+
+        <!-- solution section -->
         <section id="solution-section" class="container max-w-screen-lg min-h-screen flex flex-col justify-center">
             <h2 class="text-2xl lg:text-5xl text-center mb-12">Solution</h2>
             <div class="grid gap-12 lg:grid-cols-2">
@@ -68,6 +85,8 @@
                 </article>
             </div>
         </section>
+
+        <!-- slideshow section -->
         <section id="slideshow-section" class="h-screen pt-32">
             <div class="container h-full flex flex-col justify-center items-center gap-10">
                 <ul class="tabs__nav w-fit mx-auto" id="tabs-nav" role="tablist">

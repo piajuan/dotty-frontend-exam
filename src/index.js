@@ -36,7 +36,6 @@ const functions = (function () {
                 var target = $(href);
         
                 if (target.isInViewport()) {
-                    $('#section-pagination').fadeIn();
                     $('#section-pagination .pagination__bullet').removeClass('active');
                     $(this).addClass('active');
                 } 
@@ -44,9 +43,26 @@ const functions = (function () {
         });
     }
 
+    // Hero video
+    const heroVideo = function() {
+        $('.play-hero-btn').on('click', function() {
+            $('#hero-video').fadeIn('slow');
+            $('#hero-video').play();
+        })
+
+        $(window).on('scroll', function() {
+            // Check if the window has been scrolled down
+            if ($(this).scrollTop() > 0) {
+                $('#hero-video').fadeOut().pause(); // Hide the video
+                $('#hero-video').currentTime = 0;
+            } 
+        });
+    }
+
     function initialize() {
         tabs();
         sectionPagination();
+        heroVideo();
     }
 
     return {
